@@ -13,7 +13,11 @@ class CategoryResource extends Resource
 {
     protected static ?string $model = Category::class;
     protected static ?string $navigationIcon = 'heroicon-o-tag';
-
+    protected static ?string $navigationGroup = 'Inventori';
+    protected static ?string $navigationLabel = 'Kategori';
+    
+    
+    
     public static function form(Forms\Form $form): Forms\Form
     {
         return $form
@@ -59,4 +63,5 @@ class CategoryResource extends Resource
             'edit' => Pages\EditCategory::route('/{record}/edit'),
         ];
     }
+
 }

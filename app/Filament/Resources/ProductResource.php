@@ -12,7 +12,10 @@ class ProductResource extends Resource
 {
     protected static ?string $model = Product::class;
     protected static ?string $navigationIcon = 'heroicon-o-cube';
+    protected static ?string $navigationLabel = 'Barang';
 
+    protected static ?string $navigationGroup = 'Inventori';
+    
     public static function form(Forms\Form $form): Forms\Form
     {
         return $form
@@ -80,4 +83,5 @@ class ProductResource extends Resource
             'edit' => Pages\EditProduct::route('/{record}/edit'),
         ];
     }
+
 }

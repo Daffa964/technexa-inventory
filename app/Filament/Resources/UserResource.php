@@ -72,4 +72,6 @@ class UserResource extends Resource
             'edit' => Pages\EditUser::route('/{record}/edit'),
         ];
     }
+
+    protected static ?string $navigationLabel = 'Data User';
 }
